@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Featured Image\n"
-"POT-Creation-Date: 2015-05-27 12:50+0100\n"
-"PO-Revision-Date: 2015-05-27 12:51+0100\n"
+"POT-Creation-Date: 2015-05-28 01:37+0100\n"
+"PO-Revision-Date: 2015-05-28 01:37+0100\n"
 "Last-Translator: Ibon Azkoitia <ibon@kreatidos.com>\n"
 "Language-Team: Kreatidos <ibon@kreatidos.com>\n"
 "Language: en\n"
@@ -31,7 +31,7 @@ msgstr "Options"
 msgid "You can add here the Featured Image you want to use"
 msgstr "You can add here the Featured Image you want to use"
 
-#: lib/class-gfi-settings.php:130 lib/class-gfi.php:137
+#: lib/class-gfi-settings.php:130 lib/class-gfi.php:155
 msgid "Select Image"
 msgstr "Select Image"
 
@@ -51,7 +51,7 @@ msgstr " The Default Featured Image has been reset to the last valid setting."
 msgid "Sorry, that is an invalid file type."
 msgstr "Sorry, that is an invalid file type."
 
-#: lib/class-gfi.php:63
+#: lib/class-gfi.php:64
 msgid ""
 "Sorry, Genesis Featured Image works only with the Genesis Framework. It has "
 "been deactivated."
@@ -59,7 +59,7 @@ msgstr ""
 "Sorry, Genesis Featured Image works only with the Genesis Framework. It has "
 "been deactivated."
 
-#: lib/class-gfi.php:68
+#: lib/class-gfi.php:69
 #, php-format
 msgid ""
 "But since we're talking anyway, did you know that your server is running PHP "
@@ -69,3 +69,11 @@ msgstr ""
 "But since we're talking anyway, did you know that your server is running PHP "
 "version %1$s, which is outdated? You should ask your host to update that for "
 "you."
+
+#: lib/class-gfi.php:91
+msgid "Remember to set the Featured Image:"
+msgstr "Remember to set the Featured Image:"
+
+#: lib/class-gfi.php:93
+msgid "Settings Page"
+msgstr "Settings Page"

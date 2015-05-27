@@ -1,10 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Featured Image\n"
-"POT-Creation-Date: 2015-05-27 12:50+0100\n"
-"PO-Revision-Date: 2015-05-27 12:55+0100\n"
+"POT-Creation-Date: 2015-05-28 01:38+0100\n"
+"PO-Revision-Date: 2015-05-28 01:39+0100\n"
 "Last-Translator: Ibon Azkoitia <ibon@kreatidos.com>\n"
 "Language-Team: Kreatidos <ibon@kreatidos.com>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +13,6 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"Language: es_ES\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: lib/class-gfi-settings.php:30
@@ -31,7 +31,7 @@ msgstr "Opciones"
 msgid "You can add here the Featured Image you want to use"
 msgstr "Aquí puedes añadir la Imagen Destacada que quieres usar"
 
-#: lib/class-gfi-settings.php:130 lib/class-gfi.php:137
+#: lib/class-gfi-settings.php:130 lib/class-gfi.php:155
 msgid "Select Image"
 msgstr "Seleccionar Imagen"
 
@@ -52,7 +52,7 @@ msgstr ""
 msgid "Sorry, that is an invalid file type."
 msgstr "Lo sentimos, ese es un tipo de archivo invalido."
 
-#: lib/class-gfi.php:63
+#: lib/class-gfi.php:64
 msgid ""
 "Sorry, Genesis Featured Image works only with the Genesis Framework. It has "
 "been deactivated."
@@ -60,7 +60,7 @@ msgstr ""
 "Lo sentimos, Genesis Featured Image solo funciona con Genesis Framework. Ha "
 "sido desactivado."
 
-#: lib/class-gfi.php:68
+#: lib/class-gfi.php:69
 #, php-format
 msgid ""
 "But since we're talking anyway, did you know that your server is running PHP "
@@ -70,3 +70,11 @@ msgstr ""
 "Ya que estamos hablando, ¿sabías que tu servidor funciona con una versión "
 "PHP %1$s, que está desactualizada? Deberías pedir a tu hosting que te lo "
 "actualicen."
+
+#: lib/class-gfi.php:91
+msgid "Remember to set the Featured Image:"
+msgstr "Recuerda establecer la Imagen Destacada:"
+
+#: lib/class-gfi.php:93
+msgid "Settings Page"
+msgstr "Página de Ajustes"

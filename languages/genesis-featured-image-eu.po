@@ -1,10 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Featured Image\n"
-"POT-Creation-Date: 2015-05-27 12:50+0100\n"
-"PO-Revision-Date: 2015-05-27 13:31+0100\n"
+"POT-Creation-Date: 2015-05-28 01:39+0100\n"
+"PO-Revision-Date: 2015-05-28 01:39+0100\n"
 "Last-Translator: Ibon Azkoitia <ibon@kreatidos.com>\n"
 "Language-Team: Kreatidos <ibon@kreatidos.com>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +13,6 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"Language: eu\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: lib/class-gfi-settings.php:30
@@ -31,7 +31,7 @@ msgstr "Aukerak"
 msgid "You can add here the Featured Image you want to use"
 msgstr "Hemen aukeratu dezakezu erabili nahi duzun Irudi Nabarmendua"
 
-#: lib/class-gfi-settings.php:130 lib/class-gfi.php:137
+#: lib/class-gfi-settings.php:130 lib/class-gfi.php:155
 msgid "Select Image"
 msgstr "Irudia Aukeratu"
 
@@ -51,7 +51,7 @@ msgstr " Lehenetsi bezala aukeratutako Irudi Nabarmena berrezarri egin da."
 msgid "Sorry, that is an invalid file type."
 msgstr "Barkatu, fitxategi hori baliogabea da."
 
-#: lib/class-gfi.php:63
+#: lib/class-gfi.php:64
 msgid ""
 "Sorry, Genesis Featured Image works only with the Genesis Framework. It has "
 "been deactivated."
@@ -59,7 +59,7 @@ msgstr ""
 "Barkatu, Genesis Featured Image Genesi Frameworkarekin bakarrik lan egiten "
 "du. Ezgaitu egin da."
 
-#: lib/class-gfi.php:68
+#: lib/class-gfi.php:69
 #, php-format
 msgid ""
 "But since we're talking anyway, did you know that your server is running PHP "
@@ -69,3 +69,11 @@ msgstr ""
 "Hitz egiten hari garenez, bazenekien zure zerbitzariak erabiltzen duen PHP "
 "bertsioa %1$s dela, eta hay zaharkitua dagoela? Zure web horrialdearen "
 "ostalariari hau eguneratzea eskatu."
+
+#: lib/class-gfi.php:91
+msgid "Remember to set the Featured Image:"
+msgstr "Gogoratu Irudi Nabarmena aukeratu behar duzula:"
+
+#: lib/class-gfi.php:93
+msgid "Settings Page"
+msgstr "Ezarpen Orria"
