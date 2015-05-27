@@ -29,6 +29,7 @@ class Genesis_Featured_Image {
 			return;
 		}
 
+		add_action( 'admin_notices',			array( $this, 'gfi_activate' ) );
 		add_action( 'admin_init',				array( $this, 'gfi_check_settings') );
 		add_action( 'plugins_loaded', 			array( $this, 'gfi_load_textdomain' ) );
 		add_action( 'admin_menu', 				array( $this->settings, 'gfi_do_submenu_page' ) );
@@ -74,6 +75,23 @@ class Genesis_Featured_Image {
 
 		if ( isset( $_GET['activate'] ) ) {
 			unset( $_GET['activate'] );
+		}
+	}
+
+	/**
+	 * shows an admin message to inform user about the Genesis Featured Imate Settings page
+	 * @return admin message
+	 *
+	 * @since  1.0.0
+	 */
+	public function gfi_activate() {
+		if($_GET['activate'] == true) {
+
+			echo '<div class="updated"><p>';
+			echo __( 'Remember to set the Featured Image:', 'genesis-featured-image' );
+			echo ' <a href="'. admin_url( "admin.php?page=genesis-featured-image" ) . '" title="Genesis Featured Image Settings Page">';
+			echo __( 'Settings Page', 'genesis-featured-image' );
+			echo '</a></p></div>';
 		}
 	}
 
@@ -134,7 +152,7 @@ class Genesis_Featured_Image {
 		wp_enqueue_media();
 		wp_enqueue_script( 'genesis-featured-image-upload' );
 		wp_localize_script( 'genesis-featured-image-upload', 'objectL10n', array(
-				'text' => __( 'Select Image', 'display-featured-image-genesis' ),
+				'text' => __( 'Select Image', 'genesis-featured-image' ),
 			) );
 	}
 
