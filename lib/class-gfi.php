@@ -30,13 +30,14 @@ class Genesis_Featured_Image {
 		}
 
 		add_action( 'admin_notices',			array( $this, 'gfi_activate' ) );
-		add_action( 'admin_init',				array( $this, 'gfi_check_settings') );
+		add_action( 'admin_init',				array( $this, 'gfi_check_settings' ) );
 		add_action( 'plugins_loaded', 			array( $this, 'gfi_load_textdomain' ) );
 		add_action( 'admin_menu', 				array( $this->settings, 'gfi_do_submenu_page' ) );
 		add_action( 'get_header',				array( $this->output, 'gfi_manage_output' ) );
-		add_action( 'admin_enqueue_scripts',	array( $this, 'gfi_enqueue_scripts') );
-	}
+		add_action( 'admin_enqueue_scripts',	array( $this, 'gfi_enqueue_scripts' ) );
+		add_action( 'plugins_loaded', 			array( $this, 'gfi_action_links' ) );
 
+	}
 
 	/**
 	 * deactivates the plugin if Genesis isn't running
@@ -155,5 +156,24 @@ class Genesis_Featured_Image {
 				'text' => __( 'Select Image', 'genesis-featured-image' ),
 			) );
 	}
+
+	/**
+	 * show settings link in plugins page
+	 * @return link to the plugin settings page
+	 *
+	 * @since  1.0.0
+	 */
+	function gfi_action_links() {
+
+		add_filter( 'plugin_action_links', 'gfi_do_action_links' );
+
+		function gfi_do_action_links ( $links ) {
+			$gfiactionlinks = array( '<a href="admin.php?page=genesis-featured-image" title="Genesis Featured Image Settings Page">' . __( 'Settings', 'genesis-featured-image' ) . '</a>',
+			);
+			return array_merge( $links, $gfiactionlinks );
+		}
+ 
+	}
+ 
 
 }

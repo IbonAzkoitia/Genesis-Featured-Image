@@ -10,11 +10,11 @@
  *
  * @wordpress-plugin
  * Plugin Name: 	Genesis Featured Image
- * Plugin URI: 		http://github.com/IbonAzkoitia
+ * Plugin URI: 		https://github.com/IbonAzkoitia/Genesis-Featured-Image
  * Description: 	Allows you to add a Featured Image after header in Genesis Framework
  * Version: 		1.0.0
  * Author: 			Ibon Azkoitia
- * Author URI: 		http://www.kreatidos.com
+ * Author URI: 		http://github.com/IbonAzkoitia
  * License:			GPLv2
  * License URI:		http://www.gnu.org/licenses/gpl-2.0.txt
 */
