@@ -29,6 +29,11 @@ class Genesis_Featured_Image {
 			return;
 		}
 
+		if ( version_compare( $wp_version, '3.8', '<' ) ) {
+			add_action ( 'admin_init', array( $this, 'gfi_not_wp_version' ) );
+			return;
+		}
+
 		add_action( 'admin_notices',			array( $this, 'gfi_activate' ) );
 		add_action( 'admin_init',				array( $this, 'gfi_check_settings' ) );
 		add_action( 'plugins_loaded', 			array( $this, 'gfi_load_textdomain' ) );
@@ -77,6 +82,16 @@ class Genesis_Featured_Image {
 		if ( isset( $_GET['activate'] ) ) {
 			unset( $_GET['activate'] );
 		}
+	}
+
+	/**
+	 * error message if the wp_version it's not the minimum needed
+	 *
+	 * @since 1.0.0
+	 */
+	function gfi_not_wp_version() {
+
+		wp_die( __( 'This plugin requires WordPress version 3.8 of higher.', 'genesis-featured-image' ) );
 	}
 
 	/**
