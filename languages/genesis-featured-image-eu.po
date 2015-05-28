@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Featured Image\n"
-"POT-Creation-Date: 2015-05-28 23:28+0100\n"
-"PO-Revision-Date: 2015-05-28 23:28+0100\n"
+"POT-Creation-Date: 2015-05-29 00:33+0100\n"
+"PO-Revision-Date: 2015-05-29 00:34+0100\n"
 "Last-Translator: Ibon Azkoitia <ibon@kreatidos.com>\n"
 "Language-Team: Kreatidos <ibon@kreatidos.com>\n"
 "Language: eu\n"
@@ -31,7 +31,7 @@ msgstr "Aukerak"
 msgid "You can add here the Featured Image you want to use"
 msgstr "Hemen aukeratu dezakezu erabili nahi duzun Irudi Nabarmendua"
 
-#: lib/class-gfi-settings.php:130 lib/class-gfi.php:156
+#: lib/class-gfi-settings.php:130 lib/class-gfi.php:171
 msgid "Select Image"
 msgstr "Irudia Aukeratu"
 
@@ -51,7 +51,7 @@ msgstr " Lehenetsi bezala aukeratutako Irudi Nabarmena berrezarri egin da."
 msgid "Sorry, that is an invalid file type."
 msgstr "Barkatu, fitxategi hori baliogabea da."
 
-#: lib/class-gfi.php:65
+#: lib/class-gfi.php:70
 msgid ""
 "Sorry, Genesis Featured Image works only with the Genesis Framework. It has "
 "been deactivated."
@@ -59,7 +59,7 @@ msgstr ""
 "Barkatu, Genesis Featured Image Genesi Frameworkarekin bakarrik lan egiten "
 "du. Ezgaitu egin da."
 
-#: lib/class-gfi.php:70
+#: lib/class-gfi.php:75
 #, php-format
 msgid ""
 "But since we're talking anyway, did you know that your server is running PHP "
@@ -70,14 +70,18 @@ msgstr ""
 "bertsioa %1$s dela, eta hay zaharkitua dagoela? Zure web horrialdearen "
 "ostalariari hau eguneratzea eskatu."
 
-#: lib/class-gfi.php:92
+#: lib/class-gfi.php:94
+msgid "This plugin requires WordPress version 3.8 of higher."
+msgstr "Plugin hay WordPress 3.8 edo hurrengo bertzioa behar du."
+
+#: lib/class-gfi.php:107
 msgid "Remember to set the Featured Image:"
 msgstr "Gogoratu Irudi Nabarmena aukeratu behar duzula:"
 
-#: lib/class-gfi.php:94
+#: lib/class-gfi.php:109
 msgid "Settings Page"
 msgstr "Ezarpen Orria"
 
-#: lib/class-gfi.php:171
+#: lib/class-gfi.php:186
 msgid "Settings"
 msgstr "Ezarpenak"
