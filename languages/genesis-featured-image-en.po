@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Featured Image\n"
-"POT-Creation-Date: 2015-05-29 00:33+0100\n"
-"PO-Revision-Date: 2015-05-29 00:33+0100\n"
+"POT-Creation-Date: 2015-05-29 02:09+0100\n"
+"PO-Revision-Date: 2015-05-29 02:09+0100\n"
 "Last-Translator: Ibon Azkoitia <ibon@kreatidos.com>\n"
 "Language-Team: Kreatidos <ibon@kreatidos.com>\n"
 "Language: en\n"
@@ -19,37 +19,46 @@ msgstr ""
 msgid "Genesis Featured Image Settings"
 msgstr "Genesis Featured Image Settings"
 
-#: lib/class-gfi-settings.php:31 lib/class-gfi-settings.php:90
+#: lib/class-gfi-settings.php:31 lib/class-gfi-settings.php:92
 msgid "Featured Image"
 msgstr "Featured Image"
 
-#: lib/class-gfi-settings.php:83
+#: lib/class-gfi-settings.php:85
 msgid "Options"
 msgstr "Options"
 
-#: lib/class-gfi-settings.php:104
+#: lib/class-gfi-settings.php:106
 msgid "You can add here the Featured Image you want to use"
 msgstr "You can add here the Featured Image you want to use"
 
-#: lib/class-gfi-settings.php:130 lib/class-gfi.php:171
+#: lib/class-gfi-settings.php:132 lib/class-gfi-settings.php:247
+#: lib/class-gfi-settings.php:253 lib/class-gfi.php:171
 msgid "Select Image"
 msgstr "Select Image"
 
-#: lib/class-gfi-settings.php:136
+#: lib/class-gfi-settings.php:138
 msgid "Delete Image"
 msgstr "Delete Image"
 
-#: lib/class-gfi-settings.php:151
+#: lib/class-gfi-settings.php:153
 msgid "Something unexpected happened. Please try again."
 msgstr "Something unexpected happened. Please try again."
 
-#: lib/class-gfi-settings.php:176
+#: lib/class-gfi-settings.php:178
 msgid " The Default Featured Image has been reset to the last valid setting."
 msgstr " The Default Featured Image has been reset to the last valid setting."
 
-#: lib/class-gfi-settings.php:182
+#: lib/class-gfi-settings.php:184
 msgid "Sorry, that is an invalid file type."
 msgstr "Sorry, that is an invalid file type."
+
+#: lib/class-gfi-settings.php:248
+msgid "You may set a large image to be used on full wide after header."
+msgstr "You may set a large image to be used on full wide after header."
+
+#: lib/class-gfi-settings.php:249
+msgid "Supported file types are: jpg, jpeg, png, and gif."
+msgstr "Supported file types are: jpg, jpeg, png, and gif."
 
 #: lib/class-gfi.php:70
 msgid ""
