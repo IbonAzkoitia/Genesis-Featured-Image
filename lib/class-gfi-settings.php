@@ -25,7 +25,7 @@ class Genesis_Featured_Image_Settings {
 	 * @since 1.0.0
 	 */
 	public function gfi_do_submenu_page() {
-		add_submenu_page( 
+		$my_admin_page = add_submenu_page( 
 			'genesis', 
 			__( 'Genesis Featured Image Settings', 'genesis-featured-image' ), 
 			__( 'Featured Image', 'genesis-featured-image' ), 
@@ -35,6 +35,8 @@ class Genesis_Featured_Image_Settings {
 		);
 	
 		add_action( 'admin_init', array( $this, 'gfi_register_settings' ) );
+
+		add_action('load-'.$my_admin_page, array( $this, 'gfi_help') );
 
 	}
 
@@ -230,6 +232,27 @@ class Genesis_Featured_Image_Settings {
 	 */
 	protected function one_zero( $new_value ) {
 		return (int) (bool) $new_value;
+	}
+
+	/**
+	 * help tab for plugin settings page
+	 * @return help tab with value information for plugin
+	 *
+	 * @since 1.0.0
+	 */
+	public function gfi_help() {
+		$screen = get_current_screen();
+
+		$featuredimage_help =
+			'<h3>' . __( 'Select Image', 'genesis-featured-image' ) . '</h3>' .
+			'<p>' . __( 'You may set a large image to be used on full wide after header.', 'genesis-featured-image' ) . '</p>' .
+			'<p>' . __( 'Supported file types are: jpg, jpeg, png, and gif.', 'genesis-featured-image' ) . '</p>';
+
+		$screen->add_help_tab( array(
+			'id'		=> 'gfi_select_image-help',
+			'title'		=> __( 'Select Image', 'genesis-featured-image' ),
+			'content'	=> $featuredimage_help,
+		) );
 	}
 
 }

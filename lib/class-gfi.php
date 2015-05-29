@@ -29,7 +29,7 @@ class Genesis_Featured_Image {
 			return;
 		}
 
-		if ( version_compare( $wp_version, '3.8', '<' ) ) {
+		if ( version_compare( $wp_version, '3.8', '>' ) ) {
 			add_action ( 'admin_init', array( $this, 'gfi_not_wp_version' ) );
 			return;
 		}
