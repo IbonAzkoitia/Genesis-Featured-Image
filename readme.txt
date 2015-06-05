@@ -1,5 +1,7 @@
 === Display Featured Image for Genesis ===
 
+Contributors: ibonazkoitia
+Author URI: http://www.kreatidos.com
 Tags: featured image, featured images, genesis, studiopress, genesis framework
 Requires at least: 3.8
 Tested up to: 4.2.2
@@ -44,7 +46,7 @@ In this version style options are not added yet, but the image is in a div and y
 
 
 == Screenshots ==
-1. Screenshot of a page using the Backstretch Featured Image
+1. Screenshot of a page using the Genesis Featured Image
 2. Screenshot of the plugin settings page Genesis -> Featured Image
 
 == Changelog ==
