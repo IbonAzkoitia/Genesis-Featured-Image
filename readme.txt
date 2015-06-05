@@ -27,8 +27,8 @@ _Note: although this plugin requires the [Genesis Framework by StudioPress](http
 == Installation ==
 
 1. Upload the entire `genesis-featured-image` folder to your `/wp-content/plugins` directory.
-1. Activate the plugin through the 'Plugins' menu in WordPress.
-1. Visit the Genesis - Featured Image to select the image you want to feature.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Visit the Genesis - Featured Image to select the image you want to feature.
 
 == Frequently Asked Questions ==
 
@@ -46,8 +46,8 @@ In this version style options are not added yet, but the image is in a div and y
 
 
 == Screenshots ==
-1. Screenshot of a page using the Genesis Featured Image
-2. Screenshot of the plugin settings page Genesis -> Featured Image
+1. **Settings Page** - Screenshot of a page using the Genesis Featured Image
+2. **Genesis Featured Image in Action** - Screenshot of the plugin settings page Genesis -> Featured Image
 
 == Changelog ==
 
