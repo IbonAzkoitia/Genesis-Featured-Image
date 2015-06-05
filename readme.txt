@@ -51,5 +51,8 @@ In this version style options are not added yet, but the image is in a div and y
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.1 - 1 Jun 2015
+* Minor tweaks to readme file
+
+= 1.0.0 - 1 Jun 2015 =
 * Initial release
