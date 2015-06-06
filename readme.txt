@@ -1,4 +1,4 @@
-=== Display Featured Image for Genesis ===
+=== Genesis Featured Image ===
 
 Contributors: ibonazkoitia
 Author URI: http://www.kreatidos.com
