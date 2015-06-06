@@ -259,8 +259,7 @@ class Genesis_Featured_Image_Settings {
 	/**
 	 * Add rating links to the admin dashboard
 	 *
-	 * @since	    1.8.5
-	 * @global		string $typenow
+	 * @since	    1.0.1
 	 * @param       string $footer_text The existing footer text
 	 * @return      string
 	 */
