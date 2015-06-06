@@ -37,6 +37,7 @@ class Genesis_Featured_Image_Settings {
 		add_action( 'admin_init', array( $this, 'gfi_register_settings' ) );
 
 		add_action('load-'.$my_admin_page, array( $this, 'gfi_help') );
+		add_action('load-'.$my_admin_page, array( $this, 'gfi_thankyou') );
 
 	}
 
@@ -253,6 +254,30 @@ class Genesis_Featured_Image_Settings {
 			'title'		=> __( 'Select Image', 'genesis-featured-image' ),
 			'content'	=> $featuredimage_help,
 		) );
+	}
+
+	/**
+	 * Add rating links to the admin dashboard
+	 *
+	 * @since	    1.8.5
+	 * @global		string $typenow
+	 * @param       string $footer_text The existing footer text
+	 * @return      string
+	 */
+	function gfi_thankyou() {
+
+		add_action( 'admin_footer_text', 'gfi_rate_us' );
+
+		function gfi_rate_us( $footer_text ) {
+
+			$gfi_rate_text = sprintf( __( 'Thank you for using <a href="%1$s" target="_blank">Genesis Featured Image</a>! Please <a href="%2$s" target="_blank">rate us</a> on <a href="%2$s" target="_blank">WordPress.org</a>', 'genesis-featured-image' ),
+				'https://wordpress.org/plugins/genesis-featured-image/',
+				'https://wordpress.org/support/view/plugin-reviews/genesis-featured-image?filter=5#postform'
+			);
+
+			return str_replace( '</span>', '', $footer_text ) . ' | ' . $gfi_rate_text . '</span>';
+
+		}
 	}
 
 }
