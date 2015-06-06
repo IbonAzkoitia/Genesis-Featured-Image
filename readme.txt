@@ -5,7 +5,7 @@ Author URI: http://www.kreatidos.com
 Tags: featured image, featured images, genesis, studiopress, genesis framework
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
