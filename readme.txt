@@ -17,6 +17,8 @@ This plugins gives you the option to add a featured image under your header with
 
 _Note: although this plugin requires the [Genesis Framework by StudioPress](http://studiopress.com/) or child themes, it is not an official plugin for this framework and is neither endorsed nor supported by StudioPress._
 
+Files structures and concept are based in [Display Featured Image for Genesis - by Robin Cornett](http://robincornett.com/plugins/display-featured-image-genesis/)
+
 = Future Options =
 
 * different styles options
@@ -40,16 +42,31 @@ Technically, it should work, even older (XHTML) themes. However, depending on ot
 
 In this version style options are not added yet, but the image is in a div and you can style it:
 
-	<div id="gfi-featured-image">
-		<img>
-	</div>
+= Inside Wrap =
+	
+	<section class="wrap">
+		<div id="gfi-featured-image">
+			<img>
+		</div>
+	</section>
 
+= Full Width =
+
+	<section>
+		<div id="gfi-featured-image">
+			<img>
+		</div>
+	</section>
 
 == Screenshots ==
 1. **Genesis Featured Image in Action** - Screenshot of a page using the Genesis Featured Image
 2. **Settings Page** - Screenshot of the plugin settings page Genesis -> Featured Image
 
 == Changelog ==
+
+= 1.1.0 - 25 Jun 2015 =
+* Add Full Width Option
+* Add 
 
 = 1.0.1 - 6 Jun 2015 =
 * Minor tweaks to readme file

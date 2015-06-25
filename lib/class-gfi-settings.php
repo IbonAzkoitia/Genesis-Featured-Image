@@ -73,7 +73,8 @@ class Genesis_Featured_Image_Settings {
 		register_setting( 'genesis-featured-image', 'genesis-featured-image', array( $this, 'gfi_do_validation_things' ) );
 
 		$defaults = array(
-			'featured_image' => '',
+			'featured_image' 	=> '',
+			'gfi_full_width'	=> 0,
 		);
 
 		$this->displaysetting = get_option( 'genesis-featured-image', $defaults );
@@ -93,6 +94,14 @@ class Genesis_Featured_Image_Settings {
 			'<label for="genesis-featured-image[featured_image]">' . __( 'Featured Image', 'genesis-featured-image' ) . '</label>',
 			array( $this, 'set_featured_image' ),
 			$page, 
+			$section
+		);
+
+		add_settings_field(
+			'genesis-featured-image[gfi_full_width]',
+			'<label for="genesis-featured-image[gfi_full_width]">' . __( 'Full Width', 'genesis-featured-image' ) . '</label>',
+			array( $this, 'gfi_full_width' ),
+			$page,
 			$section
 		);
 	}
@@ -139,6 +148,24 @@ class Genesis_Featured_Image_Settings {
 				__( 'Delete Image', 'genesis-featured-image' )
 			);
 		}
+	}	
+
+
+	/**
+	 * option to make featured image full width
+	 * @return 0 1 checkbox
+	 *
+	 * @since  1.1.0
+	 */
+	public function gfi_full_width() {
+		echo '<input type="hidden" name="genesis-featured-image[gfi_full_width]" value="0" />';
+		printf( '<label for="genesis-featured-image[gfi_full_width]"><input type="checkbox" name="genesis-featured-image[gfi_full_width]" id="genesis-featured-image[gfi_full_width]" value="1" %1$s class="code" />%2$s</label>',
+			checked( 1, esc_attr( $this->displaysetting['gfi_full_width'] ), false ),
+			__( 'Make the Feature Image Full Width.', 'genesis-featured-image' )
+		);
+		echo '<p><i>';
+		echo __( 'The theme you are using should not have a full width container limit, hover the wrap, or this option may not work properly (for example: Metro Pro Theme)', 'genesis-featured-image' );
+		echo '</i></p>';
 	}
 
 	/**
@@ -157,6 +184,8 @@ class Genesis_Featured_Image_Settings {
 		check_admin_referer( 'genesis-featured-image_save-settings', 'genesis-featured-image_nonce' );
 
 		$new_value['featured_image']	= $this->validate_image( $new_value['featured_image'] );
+
+		$new_value['gfi_full_width'] 		= $this->one_zero( $new_value['gfi_full_width'] );
 
 		return $new_value;
 	}
@@ -249,10 +278,20 @@ class Genesis_Featured_Image_Settings {
 			'<p>' . __( 'You may set a large image to be used on full wide after header.', 'genesis-featured-image' ) . '</p>' .
 			'<p>' . __( 'Supported file types are: jpg, jpeg, png, and gif.', 'genesis-featured-image' ) . '</p>';
 
+		$fullwidth_help =
+			'<h3>' . __( 'Full Width', 'genesis-featured-image' ) . '</h3>' .
+			'<p>' . __( 'You can make the Featured Image Full Width. This way it would be out of the wrap for an easier style.', 'genesis-featured-image' ) . '</p>';
+
 		$screen->add_help_tab( array(
 			'id'		=> 'gfi_select_image-help',
 			'title'		=> __( 'Select Image', 'genesis-featured-image' ),
 			'content'	=> $featuredimage_help,
+		) );
+
+		$screen->add_help_tab( array(
+			'id'      => 'gfi_full_width-help',
+			'title'   => __( 'Full Width', 'genesis-featured-image' ),
+			'content' => $fullwidth_help,
 		) );
 	}
 

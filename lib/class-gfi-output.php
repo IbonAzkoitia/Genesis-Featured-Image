@@ -45,15 +45,30 @@ class Genesis_Featured_Image_Output {
 	 */
 	public function gfi_show_featured_image() {
 
-		$this->displaysetting = get_option( 'genesis-featured-image', 'featured_image' );
-		$id = $this->displaysetting['featured_image'];
+		$displaysetting = get_option( 'genesis-featured-image');
+		$id = $displaysetting['featured_image'];
 		$empty = wp_get_attachment_image_src( absint( $id ) );
 
-		if ( ! empty( $empty ) ) {
+		$displaysetting = get_option( 'genesis-featured-image');
+		$fullwidth = $displaysetting['gfi_full_width'];
+
+		if ( ! empty( $empty ) && ( $fullwidth == false ) ) {
 			
 			$preview = wp_get_attachment_image_src( absint( $id ), 'full' );
 					
 			echo '<section class="wrap">';
+			echo '<div id="gfi-featured-image">';
+			printf( '<img src="%s" />', esc_url( $preview[0] ) );
+			echo '</div>';
+			echo '</section>';
+
+			
+
+		} elseif ( ! empty( $empty ) && ( $fullwidth == true ) ) {
+
+			$preview = wp_get_attachment_image_src( absint( $id ), 'full' );
+					
+			echo '<section>';
 			echo '<div id="gfi-featured-image">';
 			printf( '<img src="%s" />', esc_url( $preview[0] ) );
 			echo '</div>';

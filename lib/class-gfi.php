@@ -23,13 +23,15 @@ class Genesis_Featured_Image {
 	}
 
 	public function gfi_run() {
+		global $wp_version;
+
 		if ( 'genesis' !== basename( get_template_directory() ) ) {
 			add_action( 'admin_init', array( $this, 'gfi_deactivate' ) );
 			add_action( 'admin_notices', array( $this, 'gfi_error_message' ) );
 			return;
 		}
 
-		if ( version_compare( $wp_version, '3.8', '>' ) ) {
+		if ( version_compare( $wp_version, '3.8', '<' ) ) {
 			add_action ( 'admin_init', array( $this, 'gfi_not_wp_version' ) );
 			return;
 		}
@@ -51,12 +53,8 @@ class Genesis_Featured_Image {
 	 * 
 	 */
 	public function gfi_deactivate() {
-		if ( version_compare( PHP_VERSION, '5.3', '>=' ) ) {
-			deactivate_plugins( plugin_basename( dirname( __DIR__ ) ) . '/genesis-featured-image.php' ); // __DIR__ is a magic constant introduced in PHP 5.3
-		}
-		else {
-			deactivate_plugins( plugin_basename( dirname( dirname( __FILE__ ) ) ) . '/genesis-featured-image.php' );
-		}
+		$dirname = version_compare( PHP_VERSION, '5.3', '>=' ) ? __DIR__ : dirname( __FILE__ );		
+        deactivate_plugins( plugin_basename( dirname( $dirname ) ) . '/genesis-featured-image.php' );
 	}
 
 	/**
@@ -101,7 +99,7 @@ class Genesis_Featured_Image {
 	 * @since  1.0.0
 	 */
 	public function gfi_activate() {
-		if($_GET['activate'] == true) {
+		if( isset($_GET['activate']) && $_GET['activate'] == true ) { 
 
 			echo '<div class="updated"><p>';
 			echo __( 'Remember to set the Featured Image:', 'genesis-featured-image' );
