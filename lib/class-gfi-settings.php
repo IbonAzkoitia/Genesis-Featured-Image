@@ -185,7 +185,7 @@ class Genesis_Featured_Image_Settings {
 	 */
 	public function gfi_hook_order() {
 		echo '<input type="hidden" name="genesis-featured-image[gfi_hook_order]" value="0" />';
-		printf( '<label for="genesis-featured-image[gfi_hook_order]"><input type="text" name="genesis-featured-image[gfi_hook_order]" id="genesis-featured-image[gfi_hook_order]" value="15" />' . __( 'Select the Desired Order for the Hook.', 'genesis-featured-image' )
+		printf( '<label for="genesis-featured-image[gfi_hook_order]"><input type="text" name="genesis-featured-image[gfi_hook_order]" id="genesis-featured-image[gfi_hook_order]" value="15" size="2" maxlength="2" />' . " " . __( 'Select the Desired Order for the Hook.', 'genesis-featured-image' )
 		);
 	}
 
