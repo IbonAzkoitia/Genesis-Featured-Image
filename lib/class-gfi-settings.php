@@ -185,7 +185,7 @@ class Genesis_Featured_Image_Settings {
 	 */
 	public function gfi_hook_order() {
 		echo '<input type="hidden" name="genesis-featured-image[gfi_hook_order]" value="0" />';
-		printf( '<label for="genesis-featured-image[gfi_hook_order]"><input type="text" name="genesis-featured-image[gfi_hook_order]" id="genesis-featured-image[gfi_hook_order]" value="15" size="2" maxlength="2" />' . " " . __( 'Select the Desired Order for the Hook.', 'genesis-featured-image' )
+		printf( '<label for="genesis-featured-image[gfi_hook_order]"><input type="number" step="1" min="0" max="99" name="genesis-featured-image[gfi_hook_order]" id="genesis-featured-image[gfi_hook_order]" value="' . esc_attr( $this->displaysetting['gfi_hook_order'] ) . '" />' . " " . __( 'Select the Desired Order for the Hook.', 'genesis-featured-image' )
 		);
 		echo '<p><i>';
 		echo __( 'Primary Nav has the value "10". You can find more help in help tab, up-right corner.', 'genesis-featured-image' );
@@ -207,9 +207,11 @@ class Genesis_Featured_Image_Settings {
 
 		check_admin_referer( 'genesis-featured-image_save-settings', 'genesis-featured-image_nonce' );
 
-		$new_value['featured_image']	= $this->validate_image( $new_value['featured_image'] );
+		$new_value['featured_image'] = $this->validate_image( $new_value['featured_image'] );
+		
+		$new_value['gfi_full_width'] = $this->one_zero( $new_value['gfi_full_width'] );
 
-		$new_value['gfi_full_width'] 		= $this->one_zero( $new_value['gfi_full_width'] );
+		$new_value['gfi_hook_order'] = absint( $new_value['gfi_hook_order'] );
 
 		return $new_value;
 	}
@@ -306,16 +308,27 @@ class Genesis_Featured_Image_Settings {
 			'<h3>' . __( 'Full Width', 'genesis-featured-image' ) . '</h3>' .
 			'<p>' . __( 'You can make the Featured Image Full Width. This way it would be out of the wrap for an easier style.', 'genesis-featured-image' ) . '</p>';
 
+		$hookorder_help =
+			'<h3>' . __( 'Hook Order', 'genesis-featured-image' ) . '</h3>' .
+			'<p>' . __( 'You can decide wich the Genesis Featured Image Hook order is going to be.', 'genesis-featured-image' ) . '</p>' . 
+			'<p>' . __( 'The predetermined Hook Order usually it\'s \'10\', so you should use a lower number to show Genesis Featured Image before the other element (For example Primary Nav), and a higher number if you want it after.', 'genesis-featured-image' ) . '</p>';
+
 		$screen->add_help_tab( array(
-			'id'		=> 'gfi_select_image-help',
-			'title'		=> __( 'Select Image', 'genesis-featured-image' ),
-			'content'	=> $featuredimage_help,
+			'id'      => 'gfi_select_image-help',
+			'title'   => __( 'Select Image', 'genesis-featured-image' ),
+			'content' => $featuredimage_help,
 		) );
 
 		$screen->add_help_tab( array(
 			'id'      => 'gfi_full_width-help',
 			'title'   => __( 'Full Width', 'genesis-featured-image' ),
 			'content' => $fullwidth_help,
+		) );
+
+		$screen->add_help_tab( array(
+			'id'      => 'gfi_hook_order-help',
+			'title'   => __( 'Hook Order', 'genesis-featured-image' ),
+			'content' => $hookorder_help,
 		) );
 	}
 
