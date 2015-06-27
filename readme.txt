@@ -22,7 +22,6 @@ Files structures and concept are based in [Display Featured Image for Genesis - 
 = Future Options =
 
 * different styles options
-* select the priority of the hook
 * select the final position, before/after the header
 * and more!
 
