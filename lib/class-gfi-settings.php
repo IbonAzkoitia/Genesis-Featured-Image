@@ -36,8 +36,8 @@ class Genesis_Featured_Image_Settings {
 	
 		add_action( 'admin_init', array( $this, 'gfi_register_settings' ) );
 
-		add_action('load-'.$my_admin_page, array( $this, 'gfi_help') );
-		add_action('load-'.$my_admin_page, array( $this, 'gfi_thankyou') );
+		add_action( 'load-'.$my_admin_page, array( $this, 'gfi_help' ) );
+		add_action( 'load-'.$my_admin_page, array( $this, 'gfi_thankyou' ) );
 
 	}
 
@@ -79,8 +79,8 @@ class Genesis_Featured_Image_Settings {
 
 		$this->displaysetting = get_option( 'genesis-featured-image', $defaults );
 
-		$page 		= 'genesis-featured-image';
-		$section 	= 'genesis_featured_image_section';
+		$page    = 'genesis-featured-image';
+		$section = 'genesis_featured_image_section';
 
 		add_settings_section(
 			$section,

@@ -5,7 +5,7 @@ Author URI: http://www.kreatidos.com
 Tags: featured image, featured images, genesis, studiopress, genesis framework
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -44,19 +44,17 @@ In this version style options are not added yet, but the image is in a div and y
 
 = Inside Wrap =
 	
-	<section class="wrap">
+	<div class="wrap">
 		<div id="gfi-featured-image">
 			<img>
 		</div>
-	</section>
+	</div>
 
 = Full Width =
 
-	<section>
-		<div id="gfi-featured-image">
-			<img>
-		</div>
-	</section>
+	<div id="gfi-featured-image">
+		<img>
+	</div>
 
 == Screenshots ==
 1. **Genesis Featured Image in Action** - Screenshot of a page using the Genesis Featured Image
@@ -64,9 +62,10 @@ In this version style options are not added yet, but the image is in a div and y
 
 == Changelog ==
 
-= 1.1.0 - 25 Jun 2015 =
+= 1.1.0 - 1 Jul 2015 =
 * Add Full Width Option
-* Add 
+* Remove index.php
+* Improve code standars
 
 = 1.0.1 - 6 Jun 2015 =
 * Minor tweaks to readme file

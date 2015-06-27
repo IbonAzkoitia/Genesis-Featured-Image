@@ -56,11 +56,11 @@ class Genesis_Featured_Image_Output {
 			
 			$preview = wp_get_attachment_image_src( absint( $id ), 'full' );
 					
-			echo '<section class="wrap">';
+			echo '<div class="wrap">';
 			echo '<div id="gfi-featured-image">';
 			printf( '<img src="%s" />', esc_url( $preview[0] ) );
 			echo '</div>';
-			echo '</section>';
+			echo '</div>';
 
 			
 
@@ -68,11 +68,9 @@ class Genesis_Featured_Image_Output {
 
 			$preview = wp_get_attachment_image_src( absint( $id ), 'full' );
 					
-			echo '<section>';
 			echo '<div id="gfi-featured-image">';
 			printf( '<img src="%s" />', esc_url( $preview[0] ) );
 			echo '</div>';
-			echo '</section>';
 
 		} else {}
 

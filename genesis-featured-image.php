@@ -12,7 +12,7 @@
  * Plugin Name: 	Genesis Featured Image
  * Plugin URI: 		https://github.com/IbonAzkoitia/Genesis-Featured-Image
  * Description: 	Allows you to add a Featured Image after header in Genesis Framework
- * Version: 		1.0.1
+ * Version: 		1.1.0
  * Author: 			Ibon Azkoitia
  * Author URI: 		http://github.com/IbonAzkoitia
  * License:			GPLv2
@@ -39,9 +39,9 @@ function genesis_featured_image_require() {
 genesis_featured_image_require();
 
 // Instantiate dependent classes
-$genesisfeaturedimage_common		= new Genesis_Featured_Image_Common();
-$genesisfeaturedimage_output		= new Genesis_Featured_Image_Output();
-$genesisfeaturedimage_settings		= new Genesis_Featured_Image_Settings();
+$genesisfeaturedimage_common   = new Genesis_Featured_Image_Common();
+$genesisfeaturedimage_output   = new Genesis_Featured_Image_Output();
+$genesisfeaturedimage_settings = new Genesis_Featured_Image_Settings();
 
 $genesisfeaturedimage = new Genesis_Featured_Image(
 	$genesisfeaturedimage_common,
