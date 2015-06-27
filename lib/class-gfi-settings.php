@@ -73,8 +73,9 @@ class Genesis_Featured_Image_Settings {
 		register_setting( 'genesis-featured-image', 'genesis-featured-image', array( $this, 'gfi_do_validation_things' ) );
 
 		$defaults = array(
-			'featured_image' 	=> '',
-			'gfi_full_width'	=> 0,
+			'featured_image' => '',
+			'gfi_full_width' => 0,
+			'gfi_hook_order' => 15,
 		);
 
 		$this->displaysetting = get_option( 'genesis-featured-image', $defaults );
@@ -101,6 +102,14 @@ class Genesis_Featured_Image_Settings {
 			'genesis-featured-image[gfi_full_width]',
 			'<label for="genesis-featured-image[gfi_full_width]">' . __( 'Full Width', 'genesis-featured-image' ) . '</label>',
 			array( $this, 'gfi_full_width' ),
+			$page,
+			$section
+		);
+
+		add_settings_field(
+			'genesis-featured-image[gfi_hook_order]',
+			'<label for="genesis-featured-image[gfi_hook_order]">' . __( 'Hook Order', 'genesis-featured-image' ) . '</label>',
+			array( $this, 'gfi_hook_order' ),
 			$page,
 			$section
 		);
@@ -166,6 +175,18 @@ class Genesis_Featured_Image_Settings {
 		echo '<p><i>';
 		echo __( 'The theme you are using should not have a full width container limit, hover the wrap, or this option may not work properly (for example: Metro Pro Theme)', 'genesis-featured-image' );
 		echo '</i></p>';
+	}
+
+	/** 
+	 * option to let user decide the hook order
+	 * @return  number
+	 *
+	 * @since  1.2.0
+	 */
+	public function gfi_hook_order() {
+		echo '<input type="hidden" name="genesis-featured-image[gfi_hook_order]" value="0" />';
+		printf( '<label for="genesis-featured-image[gfi_hook_order]"><input type="text" name="genesis-featured-image[gfi_hook_order]" id="genesis-featured-image[gfi_hook_order]" value="15" />' . __( 'Select the Desired Order for the Hook.', 'genesis-featured-image' )
+		);
 	}
 
 	/**
