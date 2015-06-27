@@ -187,6 +187,9 @@ class Genesis_Featured_Image_Settings {
 		echo '<input type="hidden" name="genesis-featured-image[gfi_hook_order]" value="0" />';
 		printf( '<label for="genesis-featured-image[gfi_hook_order]"><input type="text" name="genesis-featured-image[gfi_hook_order]" id="genesis-featured-image[gfi_hook_order]" value="15" size="2" maxlength="2" />' . " " . __( 'Select the Desired Order for the Hook.', 'genesis-featured-image' )
 		);
+		echo '<p><i>';
+		echo __( 'Primary Nav has the value "10". You can find more help in help tab, up-right corner.', 'genesis-featured-image' );
+		echo '</i></p>';
 	}
 
 	/**
