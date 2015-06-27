@@ -34,7 +34,11 @@ class Genesis_Featured_Image_Output {
 		$css_file = apply_filters( 'genesis-featured-image_css-file', plugin_dir_url( __FILE__ ) . '/css/genesis-featured-image.css' );
 		wp_enqueue_style( 'genesis-featured-image-style', esc_url( $css_file ), array(), $version );
 
-		add_action( 'genesis_after_header', array( $this, 'gfi_show_featured_image' ) );
+
+		$displaysetting = get_option( 'genesis-featured-image' );
+		$hookorder      = $displaysetting['gfi_hook_order'];
+
+		add_action( 'genesis_after_header', array( $this, 'gfi_show_featured_image' ), $hookorder );
 	}
 
 	/**
@@ -46,11 +50,11 @@ class Genesis_Featured_Image_Output {
 	public function gfi_show_featured_image() {
 
 		$displaysetting = get_option( 'genesis-featured-image');
-		$id = $displaysetting['featured_image'];
-		$empty = wp_get_attachment_image_src( absint( $id ) );
+		$id             = $displaysetting['featured_image'];
+		$empty          = wp_get_attachment_image_src( absint( $id ) );
 
 		$displaysetting = get_option( 'genesis-featured-image');
-		$fullwidth = $displaysetting['gfi_full_width'];
+		$fullwidth      = $displaysetting['gfi_full_width'];
 
 		if ( ! empty( $empty ) && ( $fullwidth == false ) ) {
 			
