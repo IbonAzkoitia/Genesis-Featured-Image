@@ -5,7 +5,7 @@ Author URI: http://www.kreatidos.com
 Tags: featured image, featured images, genesis, studiopress, genesis framework
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -61,6 +61,9 @@ In this version style options are not added yet, but the image is in a div and y
 2. **Settings Page** - Screenshot of the plugin settings page Genesis -> Featured Image
 
 == Changelog ==
+
+= 1.2.0 - X Jul 2015 =
+* Add Hook Order Option
 
 = 1.1.0 - 1 Jul 2015 =
 * Add Full Width Option
