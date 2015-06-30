@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Featured Image\n"
-"POT-Creation-Date: 2015-06-27 20:30+0100\n"
-"PO-Revision-Date: 2015-06-27 20:37+0100\n"
+"POT-Creation-Date: 2015-06-30 12:53+0100\n"
+"PO-Revision-Date: 2015-06-30 12:53+0100\n"
 "Last-Translator: Ibon Azkoitia <ibon@kreatidos.com>\n"
 "Language-Team: Kreatidos <ibon@kreatidos.com>\n"
 "Language: eu\n"
@@ -19,42 +19,47 @@ msgstr ""
 msgid "Genesis Featured Image Settings"
 msgstr "Genesis Featured Image Ezarpenak"
 
-#: lib/class-gfi-settings.php:31 lib/class-gfi-settings.php:95
+#: lib/class-gfi-settings.php:31 lib/class-gfi-settings.php:96
 msgid "Featured Image"
 msgstr "Irudi Nabarmena"
 
-#: lib/class-gfi-settings.php:88
+#: lib/class-gfi-settings.php:89
 msgid "Options"
 msgstr "Aukerak"
 
-#: lib/class-gfi-settings.php:103 lib/class-gfi-settings.php:308
-#: lib/class-gfi-settings.php:324
+#: lib/class-gfi-settings.php:104 lib/class-gfi-settings.php:333
+#: lib/class-gfi-settings.php:353
 msgid "Full Width"
 msgstr "Zabalera Osoa"
 
-#: lib/class-gfi-settings.php:111 lib/class-gfi-settings.php:312
-#: lib/class-gfi-settings.php:330
-msgid "Hook Order"
+#: lib/class-gfi-settings.php:112 lib/class-gfi-settings.php:337
+#: lib/class-gfi-settings.php:359
+msgid "Hook Priority"
 msgstr "Hookaren Ordena"
 
-#: lib/class-gfi-settings.php:125
+#: lib/class-gfi-settings.php:120 lib/class-gfi-settings.php:342
+#: lib/class-gfi-settings.php:365
+msgid "Before Header"
+msgstr "Header-a baino Lehenago"
+
+#: lib/class-gfi-settings.php:134
 msgid "You can add here the Featured Image you want to use"
 msgstr "Hemen aukeratu dezakezu erabili nahi duzun Irudi Nabarmendua"
 
-#: lib/class-gfi-settings.php:151 lib/class-gfi-settings.php:303
-#: lib/class-gfi-settings.php:318 lib/class-gfi.php:169
+#: lib/class-gfi-settings.php:160 lib/class-gfi-settings.php:328
+#: lib/class-gfi-settings.php:347 lib/class-gfi.php:169
 msgid "Select Image"
 msgstr "Irudia Aukeratu"
 
-#: lib/class-gfi-settings.php:157
+#: lib/class-gfi-settings.php:166
 msgid "Delete Image"
 msgstr "Irudia Ezabatu"
 
-#: lib/class-gfi-settings.php:173
+#: lib/class-gfi-settings.php:182
 msgid "Make the Feature Image Full Width."
 msgstr "Egin Irudi Nabarmenak Zabalera Osoa hartzea."
 
-#: lib/class-gfi-settings.php:176
+#: lib/class-gfi-settings.php:185
 msgid ""
 "The theme you are using should not have a full width container limit, hover "
 "the wrap, or this option may not work properly (for example: Metro Pro Theme)"
@@ -63,11 +68,11 @@ msgstr ""
 "bat eduki behar, wrap izan ezik, izan liteke aukera hay ondo ez "
 "funtzionatzea (adibidez: Metro Pro Theme)"
 
-#: lib/class-gfi-settings.php:188
-msgid "Select the Desired Order for the Hook."
+#: lib/class-gfi-settings.php:197
+msgid "Select the Desired Priority for the Hook."
 msgstr "Aukera ezazu Hookarentzako nahi duzun Ordena"
 
-#: lib/class-gfi-settings.php:191
+#: lib/class-gfi-settings.php:200
 msgid ""
 "Primary Nav has the value \"10\". You can find more help in help tab, up-"
 "right corner."
@@ -75,27 +80,31 @@ msgstr ""
 "Nabigazio Menu Printzipala \"10\"-eko balioa dauka. Informazio geihago "
 "aurkitu dezakezu Laguntza atalean."
 
-#: lib/class-gfi-settings.php:205
+#: lib/class-gfi-settings.php:214
+msgid "Make the Feature Image appear Before the Header."
+msgstr "Egin Irudi Nabarmenak Header-a baino Lehenago Agertzea."
+
+#: lib/class-gfi-settings.php:228
 msgid "Something unexpected happened. Please try again."
 msgstr "Ustekabeko zerbait gertatu da. Mesedez, saiatu berriz."
 
-#: lib/class-gfi-settings.php:234
+#: lib/class-gfi-settings.php:259
 msgid " The Default Featured Image has been reset to the last valid setting."
 msgstr " Lehenetsi bezala aukeratutako Irudi Nabarmena berrezarri egin da."
 
-#: lib/class-gfi-settings.php:240
+#: lib/class-gfi-settings.php:265
 msgid "Sorry, that is an invalid file type."
 msgstr "Barkatu, fitxategi hori baliogabea da."
 
-#: lib/class-gfi-settings.php:304
+#: lib/class-gfi-settings.php:329
 msgid "You may set a large image to be used on full wide after header."
 msgstr "Irudi handi bat aukeratu nahiko zenuke zabalera osoa hartzeko."
 
-#: lib/class-gfi-settings.php:305
+#: lib/class-gfi-settings.php:330
 msgid "Supported file types are: jpg, jpeg, png, and gif."
 msgstr "Erabili ahal diren fitxategi motak dira: jpg, jpeg, png eta gif."
 
-#: lib/class-gfi-settings.php:309
+#: lib/class-gfi-settings.php:334
 msgid ""
 "You can make the Featured Image Full Width. This way it would be out of the "
 "wrap for an easier style."
@@ -103,16 +112,16 @@ msgstr ""
 "Irudi Nabarmena Zabalera Osoa hartzea egin dezakezu. Era honetan wrap-aren "
 "kanpoan kokatuko da estiloak emateko."
 
-#: lib/class-gfi-settings.php:313
+#: lib/class-gfi-settings.php:338
 msgid ""
-"You can decide wich the Genesis Featured Image Hook order is going to be."
+"You can decide wich the Genesis Featured Image Hook priority is going to be."
 msgstr ""
 "Hemen aukeratu dezakezu zein izango den Genesis Featured Image Hookaren "
 "ordena."
 
-#: lib/class-gfi-settings.php:314
+#: lib/class-gfi-settings.php:339
 msgid ""
-"The predetermined Hook Order usually it's '10', so you should use a lower "
+"The predetermined Hook Priority usually it's '10', so you should use a lower "
 "number to show Genesis Featured Image before the other element (For example "
 "Primary Nav), and a higher number if you want it after."
 msgstr ""
@@ -121,7 +130,15 @@ msgstr ""
 "da (Adibidez Nabigazio Menu Printzipala), eta zenbaki altuagoa bada orduan "
 "horren ostean agertuko da."
 
-#: lib/class-gfi-settings.php:348
+#: lib/class-gfi-settings.php:343
+msgid ""
+"You can decide if the Featured Image is goint to appear before or after the "
+"header."
+msgstr ""
+"Hemen aukeratu dezakezu Irudi Nabarmena Header-a baino lehenago edo geroago "
+"agertuko den."
+
+#: lib/class-gfi-settings.php:383
 #, php-format
 msgid ""
 "Thank you for using <a href=\"%1$s\" target=\"_blank\">Genesis Featured "

@@ -5,15 +5,15 @@ Author URI: http://www.kreatidos.com
 Tags: featured image, featured images, genesis, studiopress, genesis framework
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.2.0
+Stable tag: 1.1.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-This plugin works within the Genesis Framework, to display featured images.
+This plugin works within the Genesis Framework, and lets you display a featured image.
 
 == Description ==
 
-This plugins gives you the option to add a featured image under your header with a simple selection and save of it.
+This plugins gives you the option to add a featured image before or after your header with a simple selection and save of it.
 
 _Note: although this plugin requires the [Genesis Framework by StudioPress](http://studiopress.com/) or child themes, it is not an official plugin for this framework and is neither endorsed nor supported by StudioPress._
 
@@ -22,7 +22,6 @@ Files structures and concept are based in [Display Featured Image for Genesis - 
 = Future Options =
 
 * different styles options
-* select the final position, before/after the header
 * and more!
 
 == Installation ==
@@ -39,7 +38,7 @@ Technically, it should work, even older (XHTML) themes. However, depending on ot
 
 = How can I change the styles? =
 
-In this version style options are not added yet, but the image is in a div and you can style it:
+In this version style options are not added yet, but the image it's in a div and you can style it:
 
 = Inside Wrap =
 	
@@ -61,11 +60,10 @@ In this version style options are not added yet, but the image is in a div and y
 
 == Changelog ==
 
-= 1.2.0 - X Jul 2015 =
-* Add Hook Order Option
-
-= 1.1.0 - 1 Jul 2015 =
+= 1.1.0 - 30 Jun 2015 =
 * Add Full Width Option
+* Add Hook Priority Option
+* Add Before/After Header selection Option
 * Remove index.php
 * Improve code standars
 

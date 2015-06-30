@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Featured Image\n"
-"POT-Creation-Date: 2015-06-27 20:24+0100\n"
-"PO-Revision-Date: 2015-06-27 20:28+0100\n"
+"POT-Creation-Date: 2015-06-30 12:51+0100\n"
+"PO-Revision-Date: 2015-06-30 12:52+0100\n"
 "Last-Translator: Ibon Azkoitia <ibon@kreatidos.com>\n"
 "Language-Team: Kreatidos <ibon@kreatidos.com>\n"
 "Language: es_ES\n"
@@ -19,42 +19,47 @@ msgstr ""
 msgid "Genesis Featured Image Settings"
 msgstr "Ajustes Genesis Featured Image"
 
-#: lib/class-gfi-settings.php:31 lib/class-gfi-settings.php:95
+#: lib/class-gfi-settings.php:31 lib/class-gfi-settings.php:96
 msgid "Featured Image"
 msgstr "Imagen Destacada"
 
-#: lib/class-gfi-settings.php:88
+#: lib/class-gfi-settings.php:89
 msgid "Options"
 msgstr "Opciones"
 
-#: lib/class-gfi-settings.php:103 lib/class-gfi-settings.php:308
-#: lib/class-gfi-settings.php:324
+#: lib/class-gfi-settings.php:104 lib/class-gfi-settings.php:333
+#: lib/class-gfi-settings.php:353
 msgid "Full Width"
 msgstr "Ancho Completo"
 
-#: lib/class-gfi-settings.php:111 lib/class-gfi-settings.php:312
-#: lib/class-gfi-settings.php:330
-msgid "Hook Order"
-msgstr "Orden de Hook"
+#: lib/class-gfi-settings.php:112 lib/class-gfi-settings.php:337
+#: lib/class-gfi-settings.php:359
+msgid "Hook Priority"
+msgstr "Prioridad de Hook"
 
-#: lib/class-gfi-settings.php:125
+#: lib/class-gfi-settings.php:120 lib/class-gfi-settings.php:342
+#: lib/class-gfi-settings.php:365
+msgid "Before Header"
+msgstr "Antes del Header"
+
+#: lib/class-gfi-settings.php:134
 msgid "You can add here the Featured Image you want to use"
 msgstr "Aquí puedes añadir la Imagen Destacada que quieres usar"
 
-#: lib/class-gfi-settings.php:151 lib/class-gfi-settings.php:303
-#: lib/class-gfi-settings.php:318 lib/class-gfi.php:169
+#: lib/class-gfi-settings.php:160 lib/class-gfi-settings.php:328
+#: lib/class-gfi-settings.php:347 lib/class-gfi.php:169
 msgid "Select Image"
 msgstr "Seleccionar Imagen"
 
-#: lib/class-gfi-settings.php:157
+#: lib/class-gfi-settings.php:166
 msgid "Delete Image"
 msgstr "Eliminar Imagen"
 
-#: lib/class-gfi-settings.php:173
+#: lib/class-gfi-settings.php:182
 msgid "Make the Feature Image Full Width."
 msgstr "Hacer que la Imagen Destacada coja todo el ancho."
 
-#: lib/class-gfi-settings.php:176
+#: lib/class-gfi-settings.php:185
 msgid ""
 "The theme you are using should not have a full width container limit, hover "
 "the wrap, or this option may not work properly (for example: Metro Pro Theme)"
@@ -63,11 +68,11 @@ msgstr ""
 "contenedor, aparte del wrap, o esta opción podría no funcionar correctamente "
 "(por ejemplo: Metro Pro Theme)"
 
-#: lib/class-gfi-settings.php:188
-msgid "Select the Desired Order for the Hook."
-msgstr "Selecciona el Orden Deseado para el Hook."
+#: lib/class-gfi-settings.php:197
+msgid "Select the Desired Priority for the Hook."
+msgstr "Selecciona la Prioridad Deseada para el Hook."
 
-#: lib/class-gfi-settings.php:191
+#: lib/class-gfi-settings.php:200
 msgid ""
 "Primary Nav has the value \"10\". You can find more help in help tab, up-"
 "right corner."
@@ -75,29 +80,33 @@ msgstr ""
 "El Menú de Navegación Primario tiene un valor de \"10\". Encontrarás más "
 "información en la pestaña de Ayuda."
 
-#: lib/class-gfi-settings.php:205
+#: lib/class-gfi-settings.php:214
+msgid "Make the Feature Image appear Before the Header."
+msgstr "Hacer que la Imagen Destacada aparezca Antes del Header."
+
+#: lib/class-gfi-settings.php:228
 msgid "Something unexpected happened. Please try again."
 msgstr "Algo no esperado ocurrió. Por favor vuelve a intentarlo."
 
-#: lib/class-gfi-settings.php:234
+#: lib/class-gfi-settings.php:259
 msgid " The Default Featured Image has been reset to the last valid setting."
 msgstr ""
 "La Imagen Destacada por defecto ha sido restaurada a sus valores iniciales."
 
-#: lib/class-gfi-settings.php:240
+#: lib/class-gfi-settings.php:265
 msgid "Sorry, that is an invalid file type."
 msgstr "Lo sentimos, ese es un tipo de archivo invalido."
 
-#: lib/class-gfi-settings.php:304
+#: lib/class-gfi-settings.php:329
 msgid "You may set a large image to be used on full wide after header."
 msgstr ""
 "Querrás establecer una imagen grande para usar a lo ancho después del header."
 
-#: lib/class-gfi-settings.php:305
+#: lib/class-gfi-settings.php:330
 msgid "Supported file types are: jpg, jpeg, png, and gif."
 msgstr "Los tipos de archivos soportados son: jpg, jpeg, png y gif."
 
-#: lib/class-gfi-settings.php:309
+#: lib/class-gfi-settings.php:334
 msgid ""
 "You can make the Featured Image Full Width. This way it would be out of the "
 "wrap for an easier style."
@@ -105,24 +114,33 @@ msgstr ""
 "Puedes hacer que la Imagen Destacada coja todo el ancho. De esta manera "
 "estará fuera del wrap y hará más sencillo personalizarlo."
 
-#: lib/class-gfi-settings.php:313
+#: lib/class-gfi-settings.php:338
 msgid ""
-"You can decide wich the Genesis Featured Image Hook order is going to be."
+"You can decide wich the Genesis Featured Image Hook priority is going to be."
 msgstr ""
-"Aquí puedes decidir cual será el Orden del Hook de Genesis Featured Image."
+"Aquí puedes decidir cual será la Prioridad del Hook de Genesis Featured "
+"Image."
 
-#: lib/class-gfi-settings.php:314
+#: lib/class-gfi-settings.php:339
 msgid ""
-"The predetermined Hook Order usually it's '10', so you should use a lower "
+"The predetermined Hook Priority usually it's '10', so you should use a lower "
 "number to show Genesis Featured Image before the other element (For example "
 "Primary Nav), and a higher number if you want it after."
 msgstr ""
-"El Orden Predeterminado de Hook suele ser '10', por lo tanto deberías usar "
-"un número menor si quieres que Genesis Featured Image aparezca antes que "
-"otro elemento (Por ejemplo el Menú Principal), y un número mayor si lo "
+"La Prioridad Predeterminada de Hook suele ser '10', por lo tanto deberías "
+"usar un número menor si quieres que Genesis Featured Image aparezca antes "
+"que otro elemento (Por ejemplo el Menú Principal), y un número mayor si lo "
 "quieres después."
 
-#: lib/class-gfi-settings.php:348
+#: lib/class-gfi-settings.php:343
+msgid ""
+"You can decide if the Featured Image is goint to appear before or after the "
+"header."
+msgstr ""
+"Aquí puedes decidir si la Imagen Destacada aparecerá antes o después del "
+"header."
+
+#: lib/class-gfi-settings.php:383
 #, php-format
 msgid ""
 "Thank you for using <a href=\"%1$s\" target=\"_blank\">Genesis Featured "

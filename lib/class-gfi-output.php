@@ -31,16 +31,20 @@ class Genesis_Featured_Image_Output {
 
 		$version = Genesis_Featured_Image_Common::$version;
 
-		$displaysetting = get_option( 'genesis_featured_image');
-		$hookorder = $displaysetting['gfi_hook_order'];
-
 		$css_file = apply_filters( 'genesis-featured-image_css-file', plugin_dir_url( __FILE__ ) . '/css/genesis-featured-image.css' );
 		wp_enqueue_style( 'genesis-featured-image-style', esc_url( $css_file ), array(), $version );
 
 		$displaysetting = get_option( 'genesis-featured-image' );
-		$hookorder      = $displaysetting['gfi_hook_order'];
+		$beforeheader   = $displaysetting['gfi_before_header'];
+		$hookpriority   = $displaysetting['gfi_hook_priority'];
 
-		add_action( 'genesis_after_header', array( $this, 'gfi_show_featured_image' ), $hookorder );
+		if ( isset( $beforeheader ) && ( $beforeheader == false ) ) {
+			add_action( 'genesis_after_header', array( $this, 'gfi_show_featured_image' ), $hookpriority );
+		} else {
+			add_action( 'genesis_before_header', array( $this, 'gfi_show_featured_image' ), $hookpriority );
+		}
+
+		
 	}
 
 	/**

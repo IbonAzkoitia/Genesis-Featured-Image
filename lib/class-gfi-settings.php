@@ -73,9 +73,10 @@ class Genesis_Featured_Image_Settings {
 		register_setting( 'genesis-featured-image', 'genesis-featured-image', array( $this, 'gfi_do_validation_things' ) );
 
 		$defaults = array(
-			'featured_image' => '',
-			'gfi_full_width' => 0,
-			'gfi_hook_order' => 15,
+			'featured_image'    => '',
+			'gfi_full_width'    => 0,
+			'gfi_hook_priority' => 15,
+			'gfi_before_header' => 0,
 		);
 
 		$this->displaysetting = get_option( 'genesis-featured-image', $defaults );
@@ -107,9 +108,17 @@ class Genesis_Featured_Image_Settings {
 		);
 
 		add_settings_field(
-			'genesis-featured-image[gfi_hook_order]',
-			'<label for="genesis-featured-image[gfi_hook_order]">' . __( 'Hook Order', 'genesis-featured-image' ) . '</label>',
-			array( $this, 'gfi_hook_order' ),
+			'genesis-featured-image[gfi_hook_priority]',
+			'<label for="genesis-featured-image[gfi_hook_priority]">' . __( 'Hook Priority', 'genesis-featured-image' ) . '</label>',
+			array( $this, 'gfi_hook_priority' ),
+			$page,
+			$section
+		);
+
+		add_settings_field(
+			'genesis-featured-image[gfi_before_header]',
+			'<label for="genesis-featured-image[gfi_before_header]">' . __( 'Before Header', 'genesis-featured-image' ) . '</label>',
+			array( $this, 'gfi_before_header' ),
 			$page,
 			$section
 		);
@@ -178,18 +187,32 @@ class Genesis_Featured_Image_Settings {
 	}
 
 	/** 
-	 * option to let user decide the hook order
+	 * option to let user decide the hook priority
 	 * @return  number
 	 *
-	 * @since  1.2.0
+	 * @since  1.1.0
 	 */
-	public function gfi_hook_order() {
-		echo '<input type="hidden" name="genesis-featured-image[gfi_hook_order]" value="0" />';
-		printf( '<label for="genesis-featured-image[gfi_hook_order]"><input type="number" step="1" min="0" max="99" name="genesis-featured-image[gfi_hook_order]" id="genesis-featured-image[gfi_hook_order]" value="' . esc_attr( $this->displaysetting['gfi_hook_order'] ) . '" />' . " " . __( 'Select the Desired Order for the Hook.', 'genesis-featured-image' )
+	public function gfi_hook_priority() {
+		echo '<input type="hidden" name="genesis-featured-image[gfi_hook_priority]" value="0" />';
+		printf( '<label for="genesis-featured-image[gfi_hook_priority]"><input type="number" step="1" min="0" max="99" name="genesis-featured-image[gfi_hook_priority]" id="genesis-featured-image[gfi_hook_priority]" value="' . esc_attr( $this->displaysetting['gfi_hook_priority'] ) . '" />' . " " . __( 'Select the Desired Priority for the Hook.', 'genesis-featured-image' )
 		);
 		echo '<p><i>';
 		echo __( 'Primary Nav has the value "10". You can find more help in help tab, up-right corner.', 'genesis-featured-image' );
 		echo '</i></p>';
+	}
+
+	/**
+	 * option to select if the Featured Image goes Before or After the Header
+	 * @return 0 1 checkbox
+	 *
+	 * @since 1.1.0
+	 */
+	public function gfi_before_header() {
+		echo '<input type="hidden" name="genesis-featured-image[gfi_before_header]" value="0" />';
+		printf( '<label for="genesis-featured-image[gfi_before_header]"><input type="checkbox" name="genesis-featured-image[gfi_before_header]" id="genesis-featured-image[gfi_before_header]" value="1" %1$s class="code" />%2$s</label>',
+			checked( 1, esc_attr( $this->displaysetting['gfi_before_header'] ), false ),
+			__( 'Make the Feature Image appear Before the Header.', 'genesis-featured-image' )
+		);
 	}
 
 	/**
@@ -207,11 +230,13 @@ class Genesis_Featured_Image_Settings {
 
 		check_admin_referer( 'genesis-featured-image_save-settings', 'genesis-featured-image_nonce' );
 
-		$new_value['featured_image'] = $this->validate_image( $new_value['featured_image'] );
+		$new_value['featured_image']    = $this->validate_image( $new_value['featured_image'] );
 		
-		$new_value['gfi_full_width'] = $this->one_zero( $new_value['gfi_full_width'] );
-
-		$new_value['gfi_hook_order'] = absint( $new_value['gfi_hook_order'] );
+		$new_value['gfi_full_width']    = $this->one_zero( $new_value['gfi_full_width'] );
+		
+		$new_value['gfi_hook_priority']    = absint( $new_value['gfi_hook_priority'] );
+		
+		$new_value['gfi_before_header'] = $this->one_zero( $new_value['gfi_before_header'] );
 
 		return $new_value;
 	}
@@ -308,10 +333,14 @@ class Genesis_Featured_Image_Settings {
 			'<h3>' . __( 'Full Width', 'genesis-featured-image' ) . '</h3>' .
 			'<p>' . __( 'You can make the Featured Image Full Width. This way it would be out of the wrap for an easier style.', 'genesis-featured-image' ) . '</p>';
 
-		$hookorder_help =
-			'<h3>' . __( 'Hook Order', 'genesis-featured-image' ) . '</h3>' .
-			'<p>' . __( 'You can decide wich the Genesis Featured Image Hook order is going to be.', 'genesis-featured-image' ) . '</p>' . 
-			'<p>' . __( 'The predetermined Hook Order usually it\'s \'10\', so you should use a lower number to show Genesis Featured Image before the other element (For example Primary Nav), and a higher number if you want it after.', 'genesis-featured-image' ) . '</p>';
+		$hookpriority_help =
+			'<h3>' . __( 'Hook Priority', 'genesis-featured-image' ) . '</h3>' .
+			'<p>' . __( 'You can decide wich the Genesis Featured Image Hook priority is going to be.', 'genesis-featured-image' ) . '</p>' . 
+			'<p>' . __( 'The predetermined Hook Priority usually it\'s \'10\', so you should use a lower number to show Genesis Featured Image before the other element (For example Primary Nav), and a higher number if you want it after.', 'genesis-featured-image' ) . '</p>';
+
+		$beforeheader_help =
+			'<h3>' . __( 'Before Header', 'genesis-featured-image' ) . '</h3>' .
+			'<p>' . __( 'You can decide if the Featured Image is goint to appear before or after the header.', 'genesis-featured-image' ) . '</p>';
 
 		$screen->add_help_tab( array(
 			'id'      => 'gfi_select_image-help',
@@ -326,9 +355,15 @@ class Genesis_Featured_Image_Settings {
 		) );
 
 		$screen->add_help_tab( array(
-			'id'      => 'gfi_hook_order-help',
-			'title'   => __( 'Hook Order', 'genesis-featured-image' ),
-			'content' => $hookorder_help,
+			'id'      => 'gfi_hook_priority-help',
+			'title'   => __( 'Hook Priority', 'genesis-featured-image' ),
+			'content' => $hookpriority_help,
+		) );
+
+		$screen->add_help_tab( array(
+			'id'      => 'gfi_before_header-help',
+			'title'   => __( 'Before Header', 'genesis-featured-image' ),
+			'content' => $beforeheader_help,
 		) );
 	}
 
