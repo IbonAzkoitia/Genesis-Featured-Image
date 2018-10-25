@@ -1,11 +1,11 @@
 === Genesis Featured Image ===
 
 Contributors: ibonazkoitia
-Author URI: http://www.kreatidos.com
+Author URI: http://www.ibonazkoitia.com
 Tags: featured image, featured images, genesis, studiopress, genesis framework
 Requires at least: 3.8
-Tested up to: 4.2.2
-Stable tag: 1.1.0
+Tested up to: 4.9.8
+Stable tag: 1.2.0
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -50,7 +50,7 @@ In this version style options are not added yet, but the image it's in a div and
 
 = Full Width =
 
-	<div id="gfi-featured-image">
+	<div id="gfi-featured-image" class="gfi-full-width">
 		<img>
 	</div>
 
@@ -59,6 +59,12 @@ In this version style options are not added yet, but the image it's in a div and
 2. **Settings Page** - Screenshot of the plugin settings page Genesis -> Featured Image
 
 == Changelog ==
+
+= 1.2.0 - 25 Oct 2018 =
+* Test with latest WordPress version available (4.9.8)
+* Test with the latest version of Genesis Framework (2.6.1)
+* Change css style for the image from full with to auto image size
+* Update plugin developer info and contact info
 
 = 1.1.0 - 30 Jun 2015 =
 * Add Full Width Option

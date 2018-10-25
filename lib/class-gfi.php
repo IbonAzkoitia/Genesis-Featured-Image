@@ -3,7 +3,7 @@
  * Genesis Featured Image
  *
  * @package   GenesisFeaturedImage
- * @author    Ibon Azkoitia <ibon@kreatidos.com>
+ * @author    Ibon Azkoitia <ibonazkoitia@gmail.com>
  * @link      https://github.com/IbonAzkoitia
  * @copyright 2015 Ibon Azkoitia
  * @license   GPL-2.0+

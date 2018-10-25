@@ -3,9 +3,9 @@
  * CCreates the plugin front end output.
  *
  * @package   GenesisFeaturedImage
- * @author    Ibon Azkoitia <ibon@kreatidos.com>
+ * @author    Ibon Azkoitia <ibonazkoitia@gmail.com>
  * @license   GPL-2.0+
- * @link      http://www.kreatidos.com
+ * @link      https://www.ibonazkoitia.com
  * @copyright 2015 Ibon Azkoitia
  */
 class Genesis_Featured_Image_Output {
@@ -78,7 +78,7 @@ class Genesis_Featured_Image_Output {
 
 			$preview = wp_get_attachment_image_src( absint( $id ), 'full' );
 					
-			echo '<div id="gfi-featured-image">';
+			echo '<div id="gfi-featured-image" class="gfi-full-width">';
 			printf( '<img src="%s" />', esc_url( $preview[0] ) );
 			echo '</div>';
 
