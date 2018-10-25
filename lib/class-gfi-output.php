@@ -78,7 +78,7 @@ class Genesis_Featured_Image_Output {
 
 			$preview = wp_get_attachment_image_src( absint( $id ), 'full' );
 					
-			echo '<div id="gfi-featured-image">';
+			echo '<div id="gfi-featured-image" class="gfi-full-width">';
 			printf( '<img src="%s" />', esc_url( $preview[0] ) );
 			echo '</div>';
 
