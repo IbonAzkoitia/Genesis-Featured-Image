@@ -3,9 +3,9 @@
  * CCreates the plugin front end output.
  *
  * @package   GenesisFeaturedImage
- * @author    Ibon Azkoitia <ibon@kreatidos.com>
+ * @author    Ibon Azkoitia <ibonazkoitia@gmail.com>
  * @license   GPL-2.0+
- * @link      http://www.kreatidos.com
+ * @link      https://www.ibonazkoitia.com
  * @copyright 2015 Ibon Azkoitia
  */
 class Genesis_Featured_Image_Output {

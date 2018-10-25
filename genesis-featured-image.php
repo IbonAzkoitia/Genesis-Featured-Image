@@ -3,7 +3,7 @@
  * Genesis Featured Image / add a featured image to your site
  *
  * @package   GenesisFeaturedImage
- * @author    Ibon Azkoitia <ibon@kreatidos.com>
+ * @author    Ibon Azkoitia <ibonazkoitia@gmail.com>
  * @link      https://github.com/IbonAzkoitia
  * @copyright 2015 Ibon Azkoitia
  * @license   GPL-2.0+
@@ -12,7 +12,7 @@
  * Plugin Name: 	Genesis Featured Image
  * Plugin URI: 		https://github.com/IbonAzkoitia/Genesis-Featured-Image
  * Description: 	Allows you to add a Featured Image after header in Genesis Framework
- * Version: 		1.1.0
+ * Version: 		1.2.0
  * Author: 			Ibon Azkoitia
  * Author URI: 		http://github.com/IbonAzkoitia
  * License:			GPLv2
