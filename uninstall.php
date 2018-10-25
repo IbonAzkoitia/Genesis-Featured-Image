@@ -4,7 +4,7 @@
  * 
  * @package    Genesis Featured Image
  * @subpackage uninstall
- * @author     kreatidos
+ * @author     Ibon Azkoitia
  * @since 	   1.0
  */
  

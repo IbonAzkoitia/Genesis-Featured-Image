@@ -1,2 +1,2 @@
-div#gfi-featured-image  { text-align: center; }
-	div#gfi-featured-image img { display: block; height: auto; width: 100%; }
+#gfi-featured-image img { display: block; margin: 0 auto;}
+.gfi-full-width img { display: block; height: auto; width: 100%; }

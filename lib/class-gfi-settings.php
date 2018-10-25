@@ -3,9 +3,9 @@
  * Creates the plugin admin page
  *
  * @package   GenesisFeaturedImage
- * @author    Ibon Azkoitia <ibon@kreatidos.com>
+ * @author    Ibon Azkoitia <ibonazkoitia@gmail.com>
  * @license   GPL-2.0+
- * @link      http://www.kreatidos.com
+ * @link      https://www.ibonazkoitia.com
  * @copyright 2015 Ibon Azkoitia
  * @since 1.0.0
  */
